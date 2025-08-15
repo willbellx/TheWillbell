@@ -246,13 +246,13 @@ header .navbar {
     color: var(--secondary-color);
 }
 
-/* collections section styling */
-.collections-section {
+/* menu section styling */
+.menu-section {
     color: var(--white-color);
     background-color: var(--dark-color);
     padding: 50px 0 100px;
 }
-.collections-section .collections-list {
+.menu-section .menu-list {
     display: flex;
     flex-wrap: wrap;
     gap: 110px;
@@ -260,7 +260,7 @@ header .navbar {
     justify-content: space-between;
 }
 
-.collections-section .collections-list .collections-item {
+.menu-section .menu-list .menu-item {
     display: flex;
     align-items: center;
     text-align: center;
@@ -269,20 +269,20 @@ header .navbar {
     width: calc(100% / 3 - 110px);
 }
 
-.collections-section .collections-list .collections-item .collections-image {
+.menu-section .menu-list .menu-item .menu-image {
     max-width: 50%;
     aspect-ratio: 1;
     margin-bottom: 15px;
     object-fit: contain;
 }
 
-.collections-section .collections-list .collections-item .name {
+.menu-section .menu-list .menu-item .name {
     margin: 12px 0;
     font-size: var(--font-size-l);
     font-weight: var(--font-weight-semibold);
 }
 
-.collections-section .collections-list .collections-item text{
+.menu-section .menu-list .menu-item text{
     font-size: var(--font-size-m);
 }
 
@@ -458,11 +458,11 @@ header .navbar {
 
 /* Responsive media query code for max width 1024px */
 @media screen and (max-width: 1024px) {
-  .collections-section .collections-list .collections-list {
+  .menu-section .menu-list .menu-list {
     gap: 60px;
   }
 
-  .collections-section .collections-list .collections-item {
+  .menu-section .menu-list .menu-item {
     width: calc(100% / 3 - 60px);;
   }
 }
@@ -476,7 +476,7 @@ header .navbar {
         --font-size-xxl: 1.8rem;
     }
 
-    body.show-mobile-collections header::before {
+    body.show-mobile-menu header::before {
         content: "";
         position: fixed;
         left: 0;
@@ -487,22 +487,22 @@ header .navbar {
         background: rgba(0 ,0, 0, 0.2);
     }
 
-    .navbar :where(#collections-close-button, #collections-open-button) {
+    .navbar :where(#menu-close-button, #menu-open-button) {
         display: block;
         font-size: var(--font-size-l);
     }
 
-    .navbar #collections-close-button {
+    .navbar #menu-close-button {
         position: absolute;
         right: 30px;
         top: 30px;
     }
 
-    .navbar #collections-open-button {
+    .navbar #menu-open-button {
         color: var(--white-color);
     }
 
-    .navbar .nav-collections {
+    .navbar .nav-menu {
         display: block;
         position: fixed;
         left: -300px;
@@ -513,15 +513,15 @@ header .navbar {
         flex-direction: column;
         align-items: center;
         padding-top: 100px;
-        background: var(--white-color);
+        background: var(--primary-color);
         transition: left 0.2s ease;
     }
 
-    body.show-mobile-collections .navbar .nav-collections {
+    body.show-mobile-menu .navbar .nav-menu {
         left: 0;
     }
 
-    .navbar .nav-collections .nav-link{
+    .navbar .nav-menu .nav-link{
         color: var(--white-color);
         display: block;
         margin-top: 17px;
@@ -560,15 +560,15 @@ header .navbar {
         aspect-ratio: 1;
     }
 
-    .collections-section .collections-list {
+    .menu-section .menu-list {
         gap: 30px;
     }
 
-    .collections-section .collections-list .collections-item {
+    .menu-section .menu-list .menu-item {
         width: calc(100% / 2 -30px);
     }  
 
-    .collections-section .collections-list .collections-item .collections-image {
+    .menu-section .menu-list .menu-item .menu-image {
         max-width: 200px;
     }
 
@@ -588,11 +588,11 @@ header .navbar {
 
 /* Responsive media query code for max width 640px */
 @media screen and (max-width: 640px) {
-  .collections-section .collections-list {
+  .menu-section .menu-list {
     gap: 60px;
   }    
 
-  .collections-section .collections-list .collections-item
+  .menu-section .menu-list .menu-item
   .catalogue-section .catalogue-list .catalogue-item {
         width: 100%;
     }  
