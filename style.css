@@ -249,7 +249,7 @@ header .navbar {
 /* menu section styling */
 .menu-section {
     color: var(--white-color);
-    background-color:rgb(2, 49, 6);
+    background: linear-gradient(to top left, var(--primary-color), var(--white-color));
     padding: 50px 0 100px;
 }
 .menu-section .menu-list {
@@ -450,7 +450,7 @@ header .navbar {
 /* Catalogue section */
 .catalogue-section {
     padding: 50px 0 100px;
-    background-color: #13360c;
+    background: linear-gradient(to top right, var(--primary-color), var(--white-color));
 }
 
 .catalogue-section .catalogue-list { 
@@ -697,24 +697,33 @@ header .navbar {
 /* Responsive media query code for max width 640px */
 @media screen and (max-width: 640px) {
   .menu-section .menu-list {
-    gap: 60px;
+    gap: 20px;
   }    
 
-  .menu-section .menu-list .menu-item
+  .menu-section .menu-list .menu-item {
+    width: 100%;   /* full width on small screens */
+    text-align: center;
+  }
+
+  .menu-section .menu-list .menu-item .name {
+    font-size: 1.2rem;
+    word-wrap: break-word;
+  }
+
   .catalogue-section .catalogue-list .catalogue-item {
         width: 100%;
-    }  
+  }  
 
-    .testimonials-section .slider-wrapper {
+  .testimonials-section .slider-wrapper {
         margin: 0 0 30px;
-    }
+  }
 
-    .testimonials-section .swiper-slide-button {
-        display: none;
-    }
+  .testimonials-section .swiper-slide-button {
+        display: none
+  }
 
-    .footer-section .section-content {
+  .footer-section .section-content {
         flex-direction: column;
         gap: 20px;
-    }
+  }
 }
