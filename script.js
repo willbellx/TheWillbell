@@ -13,7 +13,16 @@ menuCloseButton.addEventListener("click", () => menuOpenButton.click());
 // Close menu when the nav link is clicked 
 navLinks.forEach(link => {
     link.addEventListener("click", () => menuOpenButton.click());
-})
+});
+
+function openModal() {
+    document.getElementById("paymentModal").style.display = "flex";
+}
+
+function closeModal() {
+    document.getElementById("paymentModal").style.display = "none";
+}
+
 
 // Initialize Swiper
 const swiper = new Swiper('.slider-wrapper', {

@@ -16,7 +16,7 @@
     <header>
         <nav class="navbar section-content">
             <a href="#" class="nav-logo">
-                <h2 class="logo-text">TheWillbell | FashionbyWillbell</h2>
+                <h2 class="logo-text">FashionbyWillbell</h2>
             </a>
             <ul class="nav-menu">
                 <button id="menu-close-button" class="fas fa-times"></button>
@@ -96,34 +96,84 @@
                         <img src="joggers.png" alt="Joggers" class="menu">
                         <h3 class="name">JOGGERS</h3>
                         <p class="text">Quality joggers set for men.</p>
+                        <button class="price-tag">₦250,000</button>
                     </li>
                     <li class="menu-item">
                         <img src="necklace.png" alt="necklace" class="menu">
                         <h3 class="name">NECKLACE</h3>
                         <p class="text">Quality neckpiece set for men.</p>
+                        <button class="price-tag">₦40,000</button>
                     </li>
                      <li class="menu-item">
                         <img src="polo.png" alt="Polo" class="menu">
                         <h3 class="name">POLO</h3>
                         <p class="text">Quality Polo set for men.</p>
+                        <button class="price-tag">₦300,000</button>
                     </li>
                      <li class="menu-item">
                         <img src="sweatshirt.png" alt="Sweatshirt" class="menu">
                         <h3 class="name">SWEATSHIRT</h3>
                         <p class="text">Quality sweatshirt set for men.</p>
+                        <button class="price-tag">₦150,000</button>
                     </li>
                      <li class="menu-item">
                         <img src="beanie.png" alt="Beanie" class="menu">
                         <h3 class="name">BEANIE</h3>
                         <p class="text">Quality beanie set for men.</p>
+                        <button class="price-tag">₦25,000</button>
                     </li>
                     <li class="menu-item">
                         <img src="shorts.png" alt="Shorts" class="menu">
                         <h3 class="name">SHORTS</h3>
                         <p class="text">Quality shorts set for men.</p>
+                        <button class="price-tag">₦100,000</button>
                     </li>
                 </ul>
             </div>
+
+            <!-- Payment Button -->
+<div class="payment-button-container">
+    <button class="payment-button" onclick="openModal()">Pay Now</button>
+</div>
+
+<!-- Modal -->
+<div id="paymentModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h3>Scan to Pay with Opay</h3>
+        <img src="opay-qr.jpg" alt="Opay QR Code">
+
+        <p>Or pay to: <strong>7053270063</strong> (Opay Wallet)</p>
+        <button class="copy-btn" onclick="copyAccountNumber()">Copy Account Number</button>
+        <p id="copyMessage" style="color:green; display:none;">Copied!</p>
+    </div>
+</div>
+
+<script>
+function openModal() {
+    document.getElementById("paymentModal").style.display = "block";
+}
+function closeModal() {
+    document.getElementById("paymentModal").style.display = "none";
+}
+window.onclick = function(event) {
+    let modal = document.getElementById("paymentModal");
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+function copyAccountNumber() {
+    let accountNumber = "08012345678"; // Your Opay wallet number
+    navigator.clipboard.writeText(accountNumber).then(() => {
+        document.getElementById("copyMessage").style.display = "block";
+        setTimeout(() => {
+            document.getElementById("copyMessage").style.display = "none";
+        }, 2000);
+    });
+}
+</script>
+
            </section>
 
            <!-- Testimonials section -->
@@ -233,7 +283,7 @@
              <!-- Footer section -->
               <footer class="footer-section">
                 <div class="section-content">
-                    <p class="copyright-text">C 2025 TheWillbell</p>
+                    <p class="copyright-text">© 2025 TheWillbell</p>
 
                     <div class="social-link-list">
                         <a href="https://www.snapchat.com/add/willbellswago?share_id=AAj2ibg0TnKmjr2hQKrs4g&locale=en_NG" class="social-link"><i class="fa-brands fa-snapchat"></i></a>
