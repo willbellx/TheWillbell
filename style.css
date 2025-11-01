@@ -195,6 +195,38 @@ header .navbar {
     margin-right: 30px;
 }
 
+
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 100px; /* space between elements */
+  background: #0a0a0a;
+  color: #fff;
+}
+
+.fade-in {
+  animation: fadeInOutPause 4s ease-in-out infinite;
+}
+
+@keyframes fadeInOutPause {
+  0%, 20% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  30%, 70% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  80%, 100% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+
 /* About section styling */
 .about-section {
     padding: 120px 0;
