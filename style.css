@@ -12,8 +12,8 @@
     /* Colors */
     --white-color: #fff;
     --dark-color: #050505ee;
-    --primary-color: #13360c;
-    --secondary-color: #47f31c;
+    --primary-color: #190c36;
+    --secondary-color: #1ca4f3;
     --light-pink-color: #faf4f5;
     --medium-gray-color: #ccc;
 
@@ -113,7 +113,7 @@ header .navbar {
 }
 
 .navbar .nav-menu .nav-link {
-    padding: 10px 18px;
+    padding: 10px 10px;
     color: var(--white-color);
     font-size: var(--font-size-m);
     border-radius: var(--border-radius-m);
@@ -151,6 +151,7 @@ header .navbar {
 
 .hero-section .hero-details .subtitle {
     margin-top: 8px;
+    display: ;
     max-width: 70%;
     font-size: var(--font-size-xl);
     font-weight: var(--font-weight-semibold);
@@ -394,7 +395,7 @@ header .navbar {
 .modal-content img {
     width: 100%;
     height: auto;
-    max-width: 200px; /* Keeps it from getting too big */
+    max-width: 200px; 
     display: block;
     margin: 0 auto;
 }
